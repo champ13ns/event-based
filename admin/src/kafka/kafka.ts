@@ -1,7 +1,7 @@
 import { Kafka } from "kafkajs";
 
 const kafkaInstance = new Kafka({
-  clientId: "user-service",
+  clientId: "admin-service",
   brokers: ["http://localhost:9092"],
 });
 

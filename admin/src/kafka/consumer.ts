@@ -1,5 +1,5 @@
 import { kafkaInstance } from "./kafka";
-
+import { broadcastUserEvent } from './../socket/socketServer'
 const consumer = kafkaInstance.consumer({ groupId: "admin-group" });
 
 const startConsumer = async () => {
@@ -10,6 +10,7 @@ const startConsumer = async () => {
         // @ts-ignore
       const user = JSON.parse(message.value.toString());
       console.log(`Event recvd:`, user);
+        broadcastUserEvent(user);
     },
   });
 };

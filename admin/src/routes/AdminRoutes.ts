@@ -5,5 +5,5 @@ const router = express.Router();
 const Admin = new AdminController(); 
 
 router.get('/v1/admin/users-list',(req : Request , res : any) => {
-    return res.status({ data : Admin.getAllUsers() })
+    return res.status(200).json(({ data : Admin.getAllUsers() }))
 })
