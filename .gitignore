@@ -1,2 +1,3 @@
 /admin/node_modules
 /user/node_modules
+/user/src/.env

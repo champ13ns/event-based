@@ -5,6 +5,7 @@ const router = express.Router();
 const User = new UserController();
 
 router.post("/v1/user/add-details", (req: Request, res : any) => {
+    console.log("req.bodyt is ",req.body)
     let user =  User.addUser(req.body);
     return res.status(201).json({data : user , message : "User added succesfully"})
 });

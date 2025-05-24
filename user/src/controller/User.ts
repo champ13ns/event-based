@@ -11,6 +11,7 @@ class UserController {
 
   async addUser(user: any) {
     this.arr.push(user);
+    console.log("user in controller is ",user)
     await produceUserAddEvent(user);
     return this.arr[this.arr.length - 1];
   }
